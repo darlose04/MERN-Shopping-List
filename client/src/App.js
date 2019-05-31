@@ -8,13 +8,18 @@ import './App.css';
 
 import AppNavbar from './components/AppNavbar';
 import ShoppingList from './components/ShoppingList';
+import ItemModal from './components/ItemModal';
+import { Container } from 'reactstrap';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <AppNavbar />
-        <ShoppingList />
+        <Container>
+          <ItemModal />
+          <ShoppingList />
+        </Container>
       </div>
     </Provider>
   );
