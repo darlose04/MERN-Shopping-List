@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
 import { getItems } from '../actions/itemActions';
 import PropTypes from 'prop-types';
+import uuid from 'uuid';
 
 class ShoppingList extends Component {
   // this goes to the itemReducer file
@@ -16,8 +17,13 @@ class ShoppingList extends Component {
   //   ]
   // }
 
+  componentDidMount() {
+    this.props.getItems();
+  }
+
   render() {
-    const { items } = this.state;
+    // item represents the entire state object, items is the array inside the state
+    const { items } = this.props.item;
     return (
       <div>
         <Container>
