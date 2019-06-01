@@ -1,4 +1,4 @@
-import { GET_ITEMS, ADD_ITEM, DELETE_ITEM } from './types';
+import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from './types';
 
 export const getItems = () => {
   // this return is going to the itemReducer and checking the action.type
@@ -18,5 +18,11 @@ export const addItem = (item) => {
   return {
     type: ADD_ITEM,
     payload: item
+  }
+}
+
+export const setItemsLoading = () => {
+  return {
+    type: ITEMS_LOADING
   }
 }
