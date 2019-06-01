@@ -1,7 +1,6 @@
 // this is where the app state is going to go
 // where we check our actions (from the actions file)
 import { GET_ITEMS, ADD_ITEM, DELETE_ITEM, ITEMS_LOADING } from '../actions/types';
-import uuid from 'uuid';
 
 const initialState = {
   // don't want this static data in the array since the data is going to be coming from the backend
