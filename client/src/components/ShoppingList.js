@@ -45,8 +45,8 @@ class ShoppingList extends Component {
           >Add Item</Button> */}
           <ListGroup>
             <TransitionGroup className="shopping-list">
-              {items.map(({ id, name }) => (
-                <CSSTransition key={id} timeout={500} classNames="fade">
+              {items.map(({ _id, name }) => (
+                <CSSTransition key={_id} timeout={500} classNames="fade">
                   <ListGroupItem>
                     <Button
                       className="remove-btn"
@@ -58,7 +58,7 @@ class ShoppingList extends Component {
                       //     items: state.items.filter(item => item.id !== id)
                       //   }));
                       // }}
-                      onClick={this.onDeleteClick.bind(this, id)} // this id comes from line 43
+                      onClick={this.onDeleteClick.bind(this, _id)} // this id comes from line 43
                     >&times;</Button>
                     {name}
                   </ListGroupItem>
