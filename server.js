@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const db = require('./config/keys').MongoURI;
 
 // Connect to Mongo
-mongoose.connect(db, { useNewUrlParser: true, dbName: 'shoppinglist' })
+mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, dbName: 'shoppinglist' })
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 
