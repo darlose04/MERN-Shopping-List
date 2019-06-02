@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path'); // deals with file paths
 
-const items = require('./routes/api/items');
 
 const app = express();
 
@@ -19,7 +18,8 @@ mongoose.connect(db, { useNewUrlParser: true, dbName: 'shoppinglist' })
   .catch(err => console.log(err));
 
 // Use Routes
-app.use('/api/items', items);
+app.use('/api/items', require('./routes/api/items'));
+app.use('/api/users', require('./routes/api/users'));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
