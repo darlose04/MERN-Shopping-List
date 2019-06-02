@@ -1,13 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser'); // newest version of express includes a body parser
 const path = require('path'); // deals with file paths
 
 
 const app = express();
 
 // Bodyparser Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 // DB Config
 const db = require('./config/keys').MongoURI;
