@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 // const bodyParser = require('body-parser'); // newest version of express includes a body parser
 const path = require('path'); // deals with file paths
-
+const config = require('config');
 
 const app = express();
 
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // DB Config
-const db = require('./config/keys').MongoURI;
+const db = config.get('MongoURI');
 
 // Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, dbName: 'shoppinglist' })
