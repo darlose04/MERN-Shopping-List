@@ -61,6 +61,7 @@ class RegisterModal extends Component {
                   name="name"
                   id="name"
                   placeholder="Name"
+                  className="mb-3"
                   onChange={this.onChange}
                 />
                 <Label for="email">Email</Label>
@@ -69,6 +70,7 @@ class RegisterModal extends Component {
                   name="email"
                   id="email"
                   placeholder="Email"
+                  className="mb-3"
                   onChange={this.onChange}
                 />
                 <Label for="password">Password</Label>
@@ -77,6 +79,7 @@ class RegisterModal extends Component {
                   name="password"
                   id="password"
                   placeholder="Password"
+                  className="mb-3"
                   onChange={this.onChange}
                 />
                 <Button color="dark" style={{ marginTop: "2rem" }} block>
